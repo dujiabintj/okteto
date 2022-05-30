@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+
+
+    <context id="MysqlTables" targetRuntime="MyBatis3" defaultModelType="flat">
+
+        <!-- 注释 -->
+        <commentGenerator>
+            <property name="suppressDate" value="true"/>
+            <property name="suppressAllComments" value="true" />
+        </commentGenerator>
+
+        <!-- 数据库链接 -->
+        <jdbcConnection driverClass="com.microsoft.sqlserver.jdbc.SQLServerDriver"
+                        connectionURL="jdbc:sqlserver://114.116.234.248;DatabaseName=HeatMetering"
+                        userId="sa"
+                        password="awchance2014">
+        </jdbcConnection>
+
+        <javaTypeResolver >
+            <property name="forceBigDecimals" value="false" />
+        </javaTypeResolver>
+
+        <!-- bean -->
+        <javaModelGenerator targetPackage="com.kaopudian.bean" targetProject="E:\eclipse-workspace\ReJiLiang\admin-api\src\main\java">
+        <!--<javaModelGenerator targetPackage="com.kaopudian.bean"
+                            targetProject="/Users/lovedz/Workspaces/H20B/admin-api/src/main/java">-->
+            <!--<property name="enableSubPackages" value="true" />-->
+            <property name="trimStrings" value="true" />
+        </javaModelGenerator>
+        <sqlMapGenerator targetPackage="mapper"  targetProject="E:\eclipse-workspace\ReJiLiang\admin-api\src\main\resources">
+       <!-- <sqlMapGenerator targetPackage="mapper"
+                         targetProject="/Users/lovedz/Workspaces/H20B/admin-api/src/main/resources">-->
+            <!--<property name="enableSubPackages" value="true" />-->
+        </sqlMapGenerator>
+
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.kaopudian.dao"  targetProject="E:\eclipse-workspace\ReJiLiang\admin-api\src\main\java">
+        <!--<javaClientGenerator type="XMLMAPPER" targetPackage="com.kaopudian.dao"
+                             targetProject="/Users/lovedz/Workspaces/H20B/admin-api/src/main/java">-->
+            <!--<property name="enableSubPackages" value="true" />-->
+        </javaClientGenerator>
+
+        <!--<table  catalog="rosenberger" tableName="type" domainObjectName="system.system.Type" mapperName="system.TypeMapper"/>-->
+        <!--<table  tableName="sys_user" domainObjectName="system.SysUser" mapperName="system.SysUserMapper"   enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />-->
+        <!--<table  tableName="sys_user_group" domainObjectName="system.SysUserGroup"  mapperName="system.SysUserGroupMapper" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />-->
+       <!-- <table  tableName="all_declaration_users" domainObjectName="DeclarationUsers" mapperName="DeclarationUsersMapper" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />
+       --> <!--<table  tableName="all_team_info" domainObjectName="TeamInfo" mapperName="TeamInfoMapper" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />-->
+<!--
+        <table  tableName="all_detail" domainObjectName="Detail" mapperName="DetailMapper" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />
+-->
+        <!----><table  tableName="TempControlInfo" domainObjectName="TempControlInfo" mapperName="TempControlInfoMapper" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />
+        <!-- <table  tableName="all_notice" domainObjectName="all_notice" mapperName="all_noticeMapper" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />
+          <table  tableName="all_device_grouping" domainObjectName="all_device_grouping" mapperName="all_device_groupingMapper" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />
+          <table  tableName="all_flowchart" domainObjectName="all_flowchart" mapperName="all_flowchartMapper" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />
+          <table  tableName="all_positioninfo" domainObjectName="all_positioninfo" mapperName="all_positioninfoMapper" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />
+          <table  tableName="station_alarminfo" domainObjectName="station_alarminfo" mapperName="station_alarminfoMapper" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />
+          <table  tableName="station_alarmparam" domainObjectName="station_alarmparam" mapperName="station_alarmparamMapper" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />
+          <table  tableName="station_boilerhistorty" domainObjectName="station_boilerhistorty" mapperName="station_boilerhistortyMapper" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />
+          <table  tableName="station_boilerinfo" domainObjectName="station_boilerinfo" mapperName="station_boilerinfoMapper" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />
+          <table  tableName="station_info" domainObjectName="station_info" mapperName="station_infoMapper" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />
+          <table  tableName="station_patterncontrol" domainObjectName="station_patterncontrol" mapperName="station_patterncontrolMapper" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />
+          <table  tableName="station_period_setting" domainObjectName="station_period_setting" mapperName="station_period_settingMapper" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />
+          <table  tableName="station_switch" domainObjectName="station_switch" mapperName="station_switchMapper" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />
+
+          <table  tableName="t_user_equipment" domainObjectName="t_user_equipment" mapperName="t_user_equipmentMapper" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />-->
+        <!--<table  tableName="sys_role" domainObjectName="system.SysRole" mapperName="system.SysRoleMapper" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />-->
+        <!--<table  tableName="sys_role_auth" domainObjectName="system.SysRoleAuth" mapperName="system.SysRoleAuthMapper"  enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />-->
+        <!--<table  tableName="sys_role_user" domainObjectName="system.SysRoleUser" mapperName="system.SysRoleUserMapper" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />-->
+        <!--<table  tableName="sys_log" domainObjectName="system.SysLog" mapperName="system.SysLogMapper" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />-->
+
+    </context>
+</generatorConfiguration>
